@@ -17,42 +17,42 @@ Before you can run this application, you need to have Python installed on your m
 
 You can install these libraries using pip:
 
-'''bash
+```bash
 pip install pygame PyOpenGL
-'''
+```
 
 ## Installation
 
 Clone the repository to your local machine:
 
-'''bash
+```bash
 git clone https://github.com/russellmsilva/PyCubeMove3D.git
-'''
+```
 
 Navigate to the cloned repository directory:
 
-'''bash
+```bash
 cd PyCubeMove3D
-'''
+```
 
 Clone the repository to your local machine:
 
-'''bash
+```bash
 git clone https://github.com/russellmsilva/PyCubeMove3D.git
-'''
+```
 
 Navigate to the cloned repository directory:
-'''bash
+```bash
 cd PyCubeMove3D
-'''
+```
 
 ## Running the Application:
 
 To run the application, execute the main.py file:
 
-'''bash
+```bash
 python main.py
-'''
+```
 
 ## How It Works
 
