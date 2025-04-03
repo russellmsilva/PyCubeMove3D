@@ -35,17 +35,6 @@ Navigate to the cloned repository directory:
 cd PyCubeMove3D
 ```
 
-Clone the repository to your local machine:
-
-```bash
-git clone https://github.com/russellmsilva/PyCubeMove3D.git
-```
-
-Navigate to the cloned repository directory:
-```bash
-cd PyCubeMove3D
-```
-
 ## Running the Application:
 
 To run the application, execute the main.py file:
