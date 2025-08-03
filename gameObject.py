@@ -2,6 +2,7 @@ class GameObject:
     def __init__(self):
         self.position = [0, 0, 0]
 
+    # Move the object by a specified delta in each axis
     def move(self, dx, dy, dz):
         self.position[0] += dx
         self.position[1] += dy
