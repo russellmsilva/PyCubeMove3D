@@ -32,7 +32,7 @@ def draw_cube():
         for vertex in face:
             glVertex3fv(
                 vertices[vertex]
-            )  # Draw from and to vertices to form the cube faces
+            )  # Use sets of four vertices to construct each cube face
     glEnd()
 
 
