@@ -2,7 +2,9 @@ from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
 
+
 def draw_cube():
+    # Vertices defined for a unit cube centered at origin
     vertices = (
         (1, -1, -1),
         (1, 1, -1),
@@ -11,33 +13,26 @@ def draw_cube():
         (1, -1, 1),
         (1, 1, 1),
         (-1, -1, 1),
-        (-1, 1, 1)
+        (-1, 1, 1),
     )
 
-    edges = (
-        (0, 1),
-        (1, 2),
-        (2, 3),
-        (3, 0),
-        (4, 5),
-        (5, 6),
-        (6, 7),
-        (7, 4),
-        (0, 4),
-        (1, 5),
-        (2, 6),
-        (3, 7)
+    # Faces defined using vertex indices
+    faces = (
+        (0, 1, 2, 3),  # Back
+        (4, 5, 1, 0),  # Right
+        (7, 6, 4, 5),  # Front
+        (2, 3, 6, 7),  # Left
+        (1, 5, 7, 2),  # Top
+        (4, 0, 3, 6),  # Bottom
     )
 
-    glLineWidth(1.15)  # Set the line width to 2.0 pixels
-    glColor3f(1, 1, 1)  # Set line color to white before glBegin
-
-    glBegin(GL_LINES)
-    for edge in edges:
-        for vertex in edge:
+    glColor3f(0.8, 0.8, 1.0)  # Light blue color for faces
+    glBegin(GL_QUADS)
+    for face in faces:
+        for vertex in face:
             glVertex3fv(vertices[vertex])
-
     glEnd()
+
 
 def draw_grid():
     grid_size = 10
@@ -58,13 +53,11 @@ def draw_grid():
         glVertex3f(grid_size, 0, z)
         glEnd()
 
-def render_scene(character):
-    #glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT)
 
+def render_scene(character):
     draw_grid()  # Draw the grid on the floor
 
-    glPushMatrix()
+    glPushMatrix()  # Save the current matrix state
     glTranslate(*character.position)
     draw_cube()
-    glPopMatrix()
-
+    glPopMatrix()  # Restore the previous matrix state

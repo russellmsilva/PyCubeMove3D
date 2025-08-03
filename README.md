@@ -12,8 +12,8 @@ This Python application demonstrates basic 3D graphics programming by allowing a
 
 Before you can run this application, you need to have Python installed on your machine. This project was developed with Python 3.8, but it should be compatible with other versions of Python 3. Additionally, you'll need to install the following libraries:
 
- - Pygame: For creating the window and handling events.
- - PyOpenGL: For rendering 3D graphics.
+- Pygame: For creating the window and handling events.
+- PyOpenGL: For rendering 3D graphics.
 
 You can install these libraries using pip:
 
@@ -65,10 +65,6 @@ Manages the rendering of the 3D environment and the cube.
 
     Pygame: For creating the game window and handling user inputs.
     PyOpenGL: For 3D rendering of the cube and the environment.
-
-## Contributing
-
-While I have developed PyCubeMove3D as a foundational project to explore 3D graphics programming with Python, Pygame, and PyOpenGL, I currently do not plan to make further changes or actively review contributions to this repository. The project is provided as-is for educational purposes, and I encourage others to fork and extend the project in their own repositories.
 
 ## License
 
